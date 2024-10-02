@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package editor;
+
+service EditorService {
+  rpc JoinSession(JoinRequest) returns (JoinResponse);
+  rpc BroadcastEdit(EditRequest) returns (EditResponse);
+}
+
+message JoinRequest {
+  string session_id = 1;
+  string user_id = 2;
+}
+
+message JoinResponse {
+  bool success = 1;
+}
+
+message EditRequest {
+  string session_id = 1;
+  string user_id = 2;
+  string content = 3;
+}
+
+message EditResponse {
+  bool success = 1;
+}
