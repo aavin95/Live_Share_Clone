@@ -4,7 +4,7 @@ import (
 	"log"
 	"net"
 
-	pb "github.com/aavin95/LiveCode/pkg/proto"
+	pb "github.com/aavin95/Live_Share_Clone/pkg/proto"
 	"google.golang.org/grpc"
 )
 
